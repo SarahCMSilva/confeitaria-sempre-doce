@@ -14,7 +14,7 @@
                 <ul>
                     <li><a href="/">Início</a></li>
                     <li><a href="/sobre">Sobre</a></li>
-                    <li><a href="#">Cardápio</a></li>
+                    <li><a href="/cardapio">Cardápio</a></li>
                     <li><a href="/contatos">Contato</a></li>
                 </ul>
             </nav>
@@ -25,7 +25,7 @@
         <div class="container">
             <h2>Os melhores bolos da cidade!</h2>
             <p>Delícias feitas com amor e ingredientes frescos.</p>
-            <a href="#" class="cta-button">Saiba Mais</a>
+            <a href="/cardapio" class="cta-button">Saiba Mais</a>
         </div>
     </section>
 
@@ -38,17 +38,21 @@
 
     <section class="menu">
         <div class="container">
-            <h2>Nosso Cardápio</h2>
+            <h2 class="cardapio-title" >Nossos Destaques</h2>
             <div class="menu-items">
                 <div class="menu-item">
+
+                    <img src="{{ url_for('static', filename='img/bolo-de-chocolate.jpeg') }}" alt="Bolo de Morango">
                     <h3>Bolo de Chocolate</h3>
                     <p>Um clássico irresistível com camadas de chocolate rico.</p>
                 </div>
                 <div class="menu-item">
+                     <img src="{{ url_for('static', filename='img/bolo-de-morango.jpg') }}" alt="Bolo de Morango">
                     <h3>Bolo de Morango</h3>
                     <p>Fresco e frutado, perfeito para qualquer celebração.</p>
                 </div>
                 <div class="menu-item">
+                     <img src="{{ url_for('static', filename='img/bolo-de-cenoura.jpeg') }}" alt="Bolo de Morango">
                     <h3>Bolo de Cenoura</h3>
                     <p>Uma delícia tradicional com cobertura de chocolate.</p>
                 </div>

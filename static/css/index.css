@@ -6,7 +6,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.branco{
+color:#fff}
+.cardapio-title {
+    color: #fff; /* Escolha a cor desejada */
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -129,6 +136,7 @@ nav ul li a:hover {
 .contact {
     padding: 50px 0;
     text-align: center;
+    background-color:#8C5E5A
 }
 
 .menu-items {
@@ -158,7 +166,7 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #333;
+    background-color: #804E49;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -223,7 +231,19 @@ button {
 button:hover {
     background-color: #ff4b3a;
 }
+.menu-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Ajuste conforme necessário */
+    object-fit: cover; /* Garante que a imagem se encaixe bem no espaço */
+    margin-bottom: 10px;
+}
 
+.menu-item h3 {
+    margin-bottom: 10px;
+    color: #804E49; /* Cor atualizada */
+    font-family: 'Roboto Slab', serif; /* Aplicando a nova fonte */
+}
 /* Responsividade */
 @media (max-width: 768px) {
     .container {

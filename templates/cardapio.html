@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Confeitaria Delícia</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+    <style>
+
+        .cardapio-title {
+            color: #fff;
+            font-family: 'Roboto Slab', serif;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .menu-item h3 {
+            margin-bottom: 10px;
+            color: #804E49;
+            font-family: 'Roboto Slab', serif;
+        }
+        .rating {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .rating input {
+            display: none;
+        }
+        .rating label {
+            font-size: 20px;
+            color: #f9ff00;
+            cursor: pointer;
+        }
+        .rating input:checked ~ label,
+        .rating label:hover,
+        .rating label:hover ~ label {
+            color: #ff6f61;
+        }
+        .btn-comprar {
+            background-color: #A07A77;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn-comprar:hover {
+            background-color: #916662;
+        }
+       .hero {
+            background: url('{{ url_for('static', filename='img/fundo.jpg') }}') no-repeat center center/cover !important;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Confeitaria Delícia</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                    <li><a href="/cardapio">Cardápio</a></li>
+                    <li><a href="/contatos">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+<section class="hero">
+        <div class="container">
+            <h2>Nossos Bolos</h2>
+            <p>Escolha o seu favorito e faça seu pedido!</p>
+        </div>
+    </section>
+    <section class="menu">
+        <div class="container">
+            <h2 class="cardapio-title">Nossos Destaques</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="{{ url_for('static', filename='img/bolo-de-chocolate.jpeg') }}" alt="Bolo de Chocolate">
+                    <h3>Bolo de Chocolate</h3>
+                    <p>Um clássico irresistível com camadas de chocolate rico.</p>
+                    <div class="rating">
+                        <input type="radio" id="chocolate-star5" name="chocolate-rating" value="5"><label for="chocolate-star5">&#9733;</label>
+                        <input type="radio" id="chocolate-star4" name="chocolate-rating" value="4"><label for="chocolate-star4">&#9733;</label>
+                        <input type="radio" id="chocolate-star3" name="chocolate-rating" value="3"><label for="chocolate-star3">&#9733;</label>
+                        <input type="radio" id="chocolate-star2" name="chocolate-rating" value="2"><label for="chocolate-star2">&#9733;</label>
+                        <input type="radio" id="chocolate-star1" name="chocolate-rating" value="1"><label for="chocolate-star1">&#9733;</label>
+                    </div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+                <div class="menu-item">
+                    <img src="{{ url_for('static', filename='img/bolo-de-morango.jpg') }}" alt="Bolo de Morango">
+                    <h3>Bolo de Morango</h3>
+                    <p>Fresco e frutado, perfeito para qualquer celebração.</p>
+                    <div class="rating">
+                        <input type="radio" id="morango-star5" name="morango-rating" value="5"><label for="morango-star5">&#9733;</label>
+                        <input type="radio" id="morango-star4" name="morango-rating" value="4"><label for "morango-star4">&#9733;</label>
+                        <input type="radio" id="morango-star3" name="morango-rating" value="3"><label for="morango-star3">&#9733;</label>
+                        <input type="radio" id="morango-star2" name="morango-rating" value="2"><label for="morango-star2">&#9733;</label>
+                        <input type="radio" id="morango-star1" name="morango-rating" value="1"><label for="morango-star1">&#9733;</label>
+                    </div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+                <div class="menu-item">
+                    <img src="{{ url_for('static', filename='img/bolo-de-cenoura.jpeg') }}" alt="Bolo de Cenoura">
+                    <h3>Bolo de Cenoura</h3>
+                    <p>Uma delícia tradicional com cobertura de chocolate.</p>
+                    <div class="rating">
+                        <input type="radio" id="cenoura-star5" name="cenoura-rating" value="5"><label for="cenoura-star5">&#9733;</label>
+                        <input type="radio" id="cenoura-star4" name="cenoura-rating" value="4"><label for="cenoura-star4">&#9733;</label>
+                        <input type="radio" id="cenoura-star3" name="cenoura-rating" value="3"><label for="cenoura-star3">&#9733;</label>
+                        <input type="radio" id="cenoura-star2" name="cenoura-rating" value="2"><label for="cenoura-star2">&#9733;</label>
+                        <input type="radio" id="cenoura-star1" name="cenoura-rating" value="1"><label for="cenoura-star1">&#9733;</label>
+                    </div>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+                <!-- Adicione mais bolos aqui -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Confeitaria Delícia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

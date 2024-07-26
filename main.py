@@ -13,6 +13,11 @@ def contato():
     return render_template("contatos.html")
 
 
+@app.route("/cardapio")
+def cardapio():
+    return render_template("cardapio.html")
+
+
 @app.route("/sobre")
 def sob():
     return render_template("sobre.html")
