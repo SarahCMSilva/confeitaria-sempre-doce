@@ -7,10 +7,12 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
 .container {
     width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -29,6 +31,7 @@ header h1 {
 nav ul {
     list-style: none;
     text-align: center;
+    padding: 10px 0;
 }
 
 nav ul li {
@@ -40,6 +43,11 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6f61;
 }
 
 .hero {
@@ -66,6 +74,11 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff4b3a;
 }
 
 .about,
@@ -87,6 +100,12 @@ nav ul li a {
     margin: 10px;
     width: 30%;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
 .menu-item h3 {
@@ -99,4 +118,46 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .menu-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .menu-item {
+        width: 100%;
+    }
 }
